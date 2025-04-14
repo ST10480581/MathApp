@@ -19,11 +19,18 @@ class MainActivity : AppCompatActivity() {
             val first = edtEnterValueOne.text.toString()
             val second = edtEnterValueTwo.text.toString()
 
-            if (first.isNotEmpty() && second.isNotEmpty()) {
-                val sum = first.toInt() + second.toInt()
-                tvFinalAnswer.text = "Final Answer: $sum"
-            } else {
+            if (first.isEmpty() || second.isEmpty()) {
                 tvFinalAnswer.text = "Please enter both numbers"
+            } else {
+                val firstNum = first.toIntOrNull()
+                val secondNum = second.toIntOrNull()
+
+                if (firstNum == null || secondNum == null) {
+                    tvFinalAnswer.text = "Please enter valid integer numbers"
+                } else {
+                    val sum = firstNum + secondNum
+                    tvFinalAnswer.text = "Final Answer: $sum"
+                }
             }
         }
     }
