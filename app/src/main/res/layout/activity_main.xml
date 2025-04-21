@@ -19,7 +19,7 @@
         android:id="@+id/edtEnterValueOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="496dp"
+        android:layout_marginBottom="508dp"
         android:backgroundTint="#72090909"
         android:ems="10"
         android:inputType="text"
@@ -27,7 +27,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -59,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801" />
+        app:layout_constraintVertical_bias="0.831" />
 
     <Button
         android:id="@+id/btnCalculate"
@@ -68,9 +68,10 @@
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtEnterValueTwo"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintVertical_bias="0.414" />
 
     <TextView
         android:id="@+id/tvFinalAnswer"
@@ -82,5 +83,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="406dp"
+        android:layout_height="106dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.573">
+
+        <RadioButton
+            android:id="@+id/rbtnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rbtnSubtract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtract"
+            android:textSize="24sp" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
